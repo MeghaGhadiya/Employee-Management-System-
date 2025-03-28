@@ -27,8 +27,41 @@ Before running the project, ensure you have the following installed:
      pip install mysql-connector-python
      ```
 
-## Database Setup
+Database Setup
+Follow these steps to set up the database:
 
-1. **Create the Database**:
-   ```sql
-   CREATE DATABASE emp;
+Open MySQL Workbench or any MySQL client.
+
+Create the database using the following command:
+
+sql
+CREATE DATABASE emp;
+Use the database:
+
+sql
+USE emp;
+Create the employees table:
+
+sql
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    position VARCHAR(255) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL
+);
+How to Run
+Clone or download the repository.
+
+Open the project in a Python IDE or Jupyter Notebook.
+
+Update the connection details in the Python script to match your MySQL setup:
+
+Host: Your MySQL server address (e.g., localhost).
+
+User: Your MySQL username.
+
+Password: Your MySQL password.
+
+Database: emp
+
+Run the Python script and interact with the menu-driven application.
